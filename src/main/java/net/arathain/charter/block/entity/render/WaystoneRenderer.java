@@ -15,6 +15,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
+import java.awt.Color;
+
 public class WaystoneRenderer extends GeoBlockRenderer<WaystoneEntity> {
     AnimatedGeoModel<WaystoneEntity> stone = new WaystoneModel();
     public WaystoneRenderer()
