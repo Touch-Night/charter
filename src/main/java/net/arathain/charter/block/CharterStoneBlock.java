@@ -19,6 +19,7 @@ import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -30,7 +31,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 
 public class CharterStoneBlock extends Block implements Waterloggable, BlockEntityProvider {
         public static final VoxelShape SHAPE = createCuboidShape(2, 0, 2, 14, 32, 14);
@@ -108,7 +108,7 @@ public class CharterStoneBlock extends Block implements Waterloggable, BlockEnti
         }
         return state;
     }
-    @Override
+        
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         super.randomDisplayTick(state, world, pos, random);
         int i = pos.getX();
