@@ -20,6 +20,11 @@ public class BindingAmbienceParticle extends SpriteBillboardParticle {
     private final float greenEvolution;
     private final float blueEvolution;
 
+    private final float colorAlpha;
+    private final float colorRed;
+    private final float colorGreen;
+    private final float colorBlue;
+    
     private BindingAmbienceParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, BindingAmbienceParticleEffect bindingParticleEffect, SpriteProvider spriteProvider) {
         super(world, x, y, z, velocityX, velocityY, velocityZ);
         this.colorAlpha = bindingParticleEffect.getAlpha();
