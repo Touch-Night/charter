@@ -40,7 +40,7 @@ public class CharterVesselBlock extends Block {
         super.appendProperties(builder.add(Properties.LIT, Properties.FACING, Properties.WATERLOGGED));
     }
 
-    @Override
+    
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         CharterComponent charter = CharterUtil.getCharterAtPos(pos, world);
         if (charter != null) {
