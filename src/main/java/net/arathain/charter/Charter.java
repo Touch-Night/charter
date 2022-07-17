@@ -21,6 +21,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
+import net.fabricmc.fabric.api.mininglevel.v1.
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -49,13 +50,13 @@ public class Charter implements ModInitializer {
 	public static final Item ETERNAL_SEAL = new EternalSealItem(new Item.Settings().maxCount(1).rarity(Rarity.EPIC).group(ItemGroup.COMBAT));
 	public static final StatusEffect ETERNAL_DEBT = new CharterStatusEffect(StatusEffectCategory.NEUTRAL, 0x4bf1f7);
 	public static final StatusEffect SOUL_STRAIN = new CharterStatusEffect(StatusEffectCategory.NEUTRAL, 0x6cf5f5);
-	public static final Block PACT_PRESS = new PactPressBlock(FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE).breakByTool(ConventionalItemTags.PICKAXES, 2).requiresTool().luminance(createLightLevelFromLitBlockState(10)).ticksRandomly());
-	public static final Block WAYSTONE = new WaystoneBlock(FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE).breakByTool(ConventionalItemTags.PICKAXES, 2).requiresTool().luminance(3).nonOpaque());
-	public static final Block CHARTER_VESSEL = new CharterVesselBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).breakByTool(ConventionalItemTags.PICKAXES, 3).requiresTool().nonOpaque().ticksRandomly());
-	public static final Block BROKEN_WAYSTONE = new BrokenWaystoneBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).breakByTool(ConventionalItemTags.PICKAXES, 2).requiresTool().luminance(0));
-	public static final Block SWAPPER = new SwapperBlock(FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE).breakByTool(ConventionalItemTags.PICKAXES, 2).requiresTool().luminance(createLightLevelFromPoweredBlockState(10)));
+	public static final Block PACT_PRESS = new PactPressBlock(FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE).requiresTool().luminance(createLightLevelFromLitBlockState(10)).ticksRandomly());
+	public static final Block WAYSTONE = new WaystoneBlock(FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE).requiresTool().luminance(3).nonOpaque());
+	public static final Block CHARTER_VESSEL = new CharterVesselBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK).requiresTool().nonOpaque().ticksRandomly());
+	public static final Block BROKEN_WAYSTONE = new BrokenWaystoneBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).requiresTool().luminance(0));
+	public static final Block SWAPPER = new SwapperBlock(FabricBlockSettings.copyOf(Blocks.CHISELED_DEEPSLATE).requiresTool().luminance(createLightLevelFromPoweredBlockState(10)));
 	public static final Block CHARTER_STONE = new CharterStoneBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK).luminance(7).nonOpaque());
-	public static final Block BROKEN_CHARTER_STONE = new BrokenCharterStoneBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).breakByTool(FabricItemTags.PICKAXES, 2).requiresTool().luminance(0).ticksRandomly());
+	public static final Block BROKEN_CHARTER_STONE = new BrokenCharterStoneBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool().luminance(0).ticksRandomly());
 	public static BlockEntityType<PactPressBlockEntity> PACT_PRESS_ENTITY;
 	public static BlockEntityType<CharterStoneEntity> CHARTER_STONE_ENTITY;
 	public static BlockEntityType<WaystoneEntity> WAYSTONE_ENTITY;
