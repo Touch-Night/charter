@@ -29,7 +29,7 @@ public class BrokenCharterStoneBlock extends Block {
         return SHAPE;
     }
 
-    @Override
+    
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         super.randomDisplayTick(state, world, pos, random);
         int i = pos.getX();
