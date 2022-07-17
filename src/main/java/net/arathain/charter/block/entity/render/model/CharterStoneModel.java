@@ -5,6 +5,7 @@ import net.arathain.charter.block.entity.CharterStoneEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
+@Override
 public class CharterStoneModel extends AnimatedGeoModel<CharterStoneEntity> {
     private static final Identifier TEXTURE_IDENTIFIER = new Identifier(Charter.MODID, "textures/block/charter_stone.png");
     private static final Identifier MODEL_IDENTIFIER = new Identifier(Charter.MODID, "geo/charter_stone.geo.json");
@@ -19,7 +20,7 @@ public class CharterStoneModel extends AnimatedGeoModel<CharterStoneEntity> {
         return TEXTURE_IDENTIFIER;
     }
 
-    @Override
+    
     public Identifier getAnimationFileResource(CharterStoneEntity animatable) {
         return ANIMATION_IDENTIFIER;
     }
