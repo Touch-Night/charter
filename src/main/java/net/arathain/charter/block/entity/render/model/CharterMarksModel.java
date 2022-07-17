@@ -7,6 +7,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
+@Override
 public class CharterMarksModel extends AnimatedGeoModel<CharterStoneEntity> {
     private static final Identifier TEXTURE_IDENTIFIER = new Identifier(Charter.MODID, "textures/block/charter_stone.png");
     private static final Identifier MODEL_IDENTIFIER = new Identifier(Charter.MODID, "geo/charter_marks.geo.json");
@@ -21,7 +22,7 @@ public class CharterMarksModel extends AnimatedGeoModel<CharterStoneEntity> {
         return TEXTURE_IDENTIFIER;
     }
 
-    @Override
+    
     public Identifier getAnimationFileResource(CharterStoneEntity animatable) {
         return ANIMATION_IDENTIFIER;
     }
